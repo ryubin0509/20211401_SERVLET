@@ -18,7 +18,7 @@
     </div>
 
  <div class="card bg-dark text-white">
-    <img src="banner1_698x403/top.jpg" class="card-img" alt="...">
+    <img src="image/banner1.jpg" class="card-img" alt="...">
     <div class="card-img-overlay">
     <h5 class="card-title">컴퓨터 이벤트 </h5>
     <p class="card-text">출처 : 다나와</p>
