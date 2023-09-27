@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"%>
     <footer class="container">
-        <p>&copy; 웹마켓 최하단 상태바 <br> 
+        <p>&copy; 쇼핑몰 대표: 이름, 고유번호:학번,연락처:이메일 주소  <br> 
         <%  
         Date day = new java.util.Date();
 	String am_pm;
