@@ -31,7 +31,7 @@ public class Product implements Serializable { // 인터페이스 선언
 	public String getPname() {
 		return pname;
 	}
-    public void setPname(String pname) {
+    	public void setPname(String pname) {
 		this.pname = pname;
 	}
 
@@ -58,7 +58,8 @@ public class Product implements Serializable { // 인터페이스 선언
 	public String getManufacturer() {
 		return manufacturer;
 	}
-    public void setManufacturer(String manufacturer) {
+
+	public void setManufacturer(String manufacturer) {
 		this.manufacturer = manufacturer;
 	}
 
