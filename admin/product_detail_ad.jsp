@@ -2,7 +2,9 @@
 <%@ page import="dto.Product"%>
 <%@ page import="java.util.Date"%>
 <%@ page import="example.*" %>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+<%@ page import="dao.ProductRepository"%>
+<%@ page errorPage = "../exception/product_not_found.jsp" %>
+
 <html>
 <head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,8 +14,8 @@
 <title>상품 상세 정보</title>
 </head>
     <body>
-    	<%@ include file="top_banner.jsp" %>
-	<%@ include file="top_menu.jsp" %>
+    	
+	<%@ include file="top_menu.ad.jsp" %>
 	<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">상품 상세 정보</h1>
@@ -21,7 +23,8 @@
 	</div>
 	<%
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id); 
 	%>
 	<div class="container">
 		<div class="row">
