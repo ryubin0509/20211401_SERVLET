@@ -21,7 +21,7 @@
     <%-- JSP 주석처리 --%>
     <%@ include file ="../top_banner.jsp" %>
     <%@ include file ="top_menu_ad.jsp" %>
-    <%@ include file ="../body_main.jsp" %>
+    <%@ include file ="body_main_ad.jsp" %>
     <%@ include file ="../footer.jsp" %>
     
      현재 페이지 버퍼 용량 : <%= out.getBufferSize() %> <br>
