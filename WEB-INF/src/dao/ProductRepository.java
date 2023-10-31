@@ -21,6 +21,7 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+        phone.setFilename("P1234.jpg");
         
         Product phone_1 = new Product("P1235", "갤럭시 S23", 1400000);
 		phone_1.setDescription("6.1-inch, 2340 x 1080 FHD+ display, Dynamic AMOLED 2X");
@@ -28,6 +29,7 @@ public class ProductRepository {
 		phone_1.setManufacturer("Samsung");
 		phone_1.setUnitsInStock(1000);
 		phone_1.setCondition("New");
+        phone_1.setFilename("P1235.jpg");
         
         Product phone_2 = new Product("P1236", "갤럭시 Z 플립5", 1180000);
 		phone_2.setDescription("6.7-inch, 2640 x 1080 FHD+ display, Dynamic AMOLED 2X");
@@ -35,6 +37,7 @@ public class ProductRepository {
 		phone_2.setManufacturer("Samsung");
 		phone_2.setUnitsInStock(1000);
 		phone_2.setCondition("New");
+        phone_2.setFilename("P1236.jpg");
         
         Product tablet = new Product("P1237", "Galaxy Tab S" , 900000);
 		tablet.setDescription("212.8*125.6*6.6mm,  Super AMOLED display, Octa-Core processor");
@@ -42,6 +45,7 @@ public class ProductRepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("Old");
+        tablet.setFilename("P1237.jpg");
         
         Product tablet_1 = new Product("P1238", "Apple 아이패드 에어 5세대 ", 830000);
 		tablet_1.setDescription("178.5*247.6*6.1mm,  2360x1640, Apple M1 ");
@@ -49,6 +53,7 @@ public class ProductRepository {
 		tablet_1.setManufacturer("Apple");
 		tablet_1.setUnitsInStock(1000);
 		tablet_1.setCondition("New");
+        tablet_1.setFilename("P1238.jpg");
         //상품명: Apple 아이패드 에어 5세대 M1 WIFI 64G 스페이스 그레이
         
         Product notebook = new Product("P1239", "LG PC 그램", 1500000);
@@ -57,6 +62,7 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished");
+        notebook.setFilename("P1239.jpg");
         
         Product notebook_1 = new Product("P1240", "삼성 노트북 플러스2", 530000);
 		notebook_1.setDescription("15.6-inch, 1920x1080(FHD) display , 펜티엄-7505");
@@ -64,7 +70,7 @@ public class ProductRepository {
 		notebook_1.setManufacturer("Samsung");
 		notebook_1.setUnitsInStock(1000);
 		notebook_1.setCondition("Refurbished");
-
+        notebook_1.setFilename("P1240.jpg"); 
         
         Product desktop = new Product("P1241", "삼성 DM500TFA-A58A" , 947000);
 		desktop.setDescription("173 x 406 x 356mm, SSD용량 : 256GB , 코어i5 13세대");
@@ -72,6 +78,7 @@ public class ProductRepository {
 		desktop.setManufacturer("Samsung");
 		desktop.setUnitsInStock(1000);
 		desktop.setCondition("New");
+        desktop.setFilename("P1241.jpg");
 		       
         Product desktop_1 = new Product("P1242", "LG전자 B81KV-AX3509" , 840000);
 		desktop_1.setDescription("17.7cm, SSD용량 : 256GB , 코어i5 13세대");
@@ -79,7 +86,7 @@ public class ProductRepository {
 		desktop_1.setManufacturer("Lg");
 		desktop_1.setUnitsInStock(1000);
 		desktop_1.setCondition("New");
-       
+        desktop_1.setFilename("P1242.jpg");
  
 		// 위와 같이 상품 초기화 하고 아래에 상품을 추가
 
