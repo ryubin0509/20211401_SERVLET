@@ -7,7 +7,7 @@ public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>(); // ArrayList를 Product로 캐스팅
     private static ProductRepository instance = new ProductRepository();
 
-   public static ProductRepository getInstance(){
+    public static ProductRepository getInstance(){
 	return instance;
    }
 
