@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.time.LocalDate" %>
+
 
 <html>
 <head>
@@ -23,30 +25,58 @@
 	      	<input name="name" type="text" class="form-control" />
 	          </div>
 	    </div>
-	<div class="form-group row">
-	<label class="col-sm-2">배송일</label>
-	<div class="col-sm-3">
-		<input name="shippingDate" type="text" class="form-control" />(yyyy/mm/dd)
-	</div>
-	  </div>
-	 <div class="form-group row">
-	   <label class="col-sm-2">국가명</label>
-	     <div class="col-sm-3">
-		<input name="country" type="text" class="form-control" />
-	    </div>
-	 </div>
-	<div class="form-group row">
-	   <label class="col-sm-2">우편번호</label>
-	     <div class="col-sm-3">
-	 	<input name="zipCode" type="text" class="form-control" />
-	    </div>
-	</div>
-    	<div class="form-group row">
-	   <label class="col-sm-2">주소</label>
-	     <div class="col-sm-5">
-		<input name="addressName" type="text" class="form-control" />
-	     </div>
-	</div>
+        <div class="form-group row">
+        <label class="col-sm-2">배송일</label>
+        <div class="col-sm-3">
+        <input name="shippingDate" type="date" class="form-control" min="<%= LocalDate.now().plusDays(1) %>" />
+        </div>
+        </div>
+
+<div class="form-group row">
+    <label class="col-sm-2">국가명</label>
+    <div class="col-sm-3">
+        <select name="country" class="form-control">
+            <option value="한국">한국</option>
+            <option value="중국">중국</option>
+            <option value="일본">일본</option>
+            <option value="미국">미국</option>
+        </select>
+    </div>
+</div>
+           
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function searchAddress() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                var zipCode = data.zonecode; // 우편번호 정보를 변수에 저장
+                var address = data.address; // 검색한 주소 정보를 변수에 저장
+                document.getElementById('zipCode').value = zipCode; // 우편번호 입력 필드에 우편번호를 설정
+                document.getElementById('addressName').value = address; // 주소 입력 필드에 검색한 주소를 설정
+            }
+        }).open();
+    }
+</script>
+
+...
+
+<div class="form-group row">
+    <label class="col-sm-2">우편번호</label>
+    <div class="col-sm-3">
+        <input id="zipCode" name="zipCode" type="text" class="form-control" />
+    </div>
+    <div class="col-sm-2">
+        <button type="button" class="btn btn-primary" onclick="searchAddress()">검색</button>
+    </div>
+</div>
+<div class="form-group row">
+    <label class="col-sm-2">주소</label>
+    <div class="col-sm-5">
+        <input id="addressName" name="addressName" type="text" class="form-control" />
+    </div>
+</div>
+
+
 	<div class="form-group row">
 	   <div class="col-sm-offset-2 col-sm-10 ">
 	     <a href="../cart/product_cart.jsp?cartId=<%=request.getParameter("cartId")%>" class="btn btn-secondary" role="button"> 이전 </a> 
