@@ -10,4 +10,4 @@
          %>    
         오늘 날짜와 시간 : <%=time.timenow() %>
         </p>
-	</footer>
+	</footer>cp tomcat-users.xml tomcat-user_back.xml
